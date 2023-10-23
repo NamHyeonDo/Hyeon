@@ -99,8 +99,101 @@ file.write("world")
 
 file.close() """
 
-file = open("temp.txt", "r")
+""" file = open("temp.txt", "r")
 res = file.read()
 print(res)
 
-file.close()
+file.close() """
+
+""" #활용
+import os
+fp = "temp.txt"
+file = open(fp, "w")
+if os.path. exists(fp):
+        print("ok")
+        
+else :
+    print("error")
+    
+file.close """
+
+#삭제
+""" import os
+fp = "new.txt"
+
+f = open(fp, "w")
+f.close()
+
+os.remove(fp)
+print("complete") """
+
+#
+""" import os
+
+def dir_print(p):
+    files = os.listdir(p)
+    for f in files:
+        print(f)
+        
+fp = "new.txt"
+f = open(fp, "w")
+f.close()
+
+dir_print("./")
+
+os.remove(fp)
+print("----------------------\n\n")
+dir_print("./") """
+
+#파일명 변경
+""" import os
+fp = "new.txt"
+f = open(fp, "w")
+f.close()
+
+os.rename(fp, "new.txt")
+print("complete") """
+
+#재변경 예외처리
+""" import os
+
+fp = "new.txt"
+tp = "new1.txt"
+
+f = open(fp, "w")
+f.close
+
+if os.path.exists(tp):
+    print("exist, same name file")
+    os.remove(tp)
+else:
+    os.remove(fp, "new1.txt")
+    print("complate") """
+    
+#위에서 했던것들
+""" import os
+def dir_print(p):
+    files = os.listdir(p)
+    for f in files:
+        print(f)
+        
+fp = "new.txt"
+tp = "new1.txt"
+
+f = open(fp, "w")
+f.close
+
+dir_print("./")
+print("\n----------------------")
+
+if os.path.exists(tp):
+    print("exist, same name file")
+    os.remove(tp)
+else:
+    os.remove(fp, "new1.txt")
+    print("complate") """
+    
+#with
+
+""" with open(tamp.txt, "r") as f:
+    print(f.read()) """
